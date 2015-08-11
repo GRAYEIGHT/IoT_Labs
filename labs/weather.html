@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Lab - Sense Weather</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="GRAY8 LLC">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../js/labs.js"></script>
+</head>
+<body class="lab">
+	<section id="menu" class="">
+		<table style="width:100%">
+			<col width="80px">
+			<tr>
+				<td><a class="menuItem intro" href="../index.html">&lt;&nbsp;Back</a></td>
+				<td><a class="menuItem intro" href="#introAnchor">Intro</a></td>
+				<td><a class="menuItem parts" href="#partsAnchor">Parts</a></td>
+				<td><a class="menuItem wiring" href="#wiringAnchor">Wiring</a></td>
+				<td><a class="menuItem program" href="#programAnchor">Program</a></td>
+				<td><a class="menuItem notWorking" href="#notWorkingAnchor">Not Working</a></td>
+				<td><a class="menuItem goingFurther" href="#goingFurtherAnchor">Going Further</a></td>
+			</tr>
+		</table>
+	</section>
+	<section id="title" class="card fade-in">
+		<h1>Sense Weather</h1>
+		<p>
+			In this workshop, you will connect a BMP280 sensor to an Arduino via the SPI interface. You will program the Arduino to 
+			read the sensors temperature, barometric pressure and altidude values and send the data to the serial interface.
+		</p>
+	</section>
+	<div id="introAnchor" class="anchor"></div>
+	<section id="intro" class="card fade-in">
+		<div class="header"><h1>Introduction</h1></div>
+		<p>
+			The BMP280 sensor is an environmental sensor that senses temperature, barometric pressure and altitude. 
+			This sensor is great for all sorts of weather sensing.	The sensor is very precise with a barometric pressure accuracy of ±1 hPa, a temperature accuracy of ±1.0°C
+			and a altimeter accuracy of ±1 meter.
+		</p>
+		<p>
+			For this lab, you will connect the BMP280 to the Arduino. The sensor will interface with the Arduino via the SPI itnerface. Once connected, the Arduino will read
+			temperature, barometric pressure and altitude data from the BMP280 and write the data to the serial interface.
+		</p>
+		<p>
+			To begin, grab the parts listed in the Parts section and assemble them as illustrated in the diagram in the Breadboard section. 
+		</p>
+		<p>
+			Once your circuit is assembled, use the Arduino IDE to type in the code in the Program section and upload it to your Arduino. 
+			To do this, plug the Arduino board into your USB port. Then select the proper port in Tools > Serial Port > (the comm port of your Arduino). 
+		</p>
+		<p>
+			Next upload the program by going to File > Upload to I/O Board (ctrl+U). Finally bask in the glory and possibility that controlling lights offers.
+		</p>
+	</section>
+	<div id="partsAnchor" class="anchor"></div>
+	<section id="parts" class="card fade-in">
+		<div class="header"><h1>Parts</h1></div>
+		<p>The following the parts for this lab.</p>
+		<table>
+			<col width="30%">
+
+			<tr>
+				<td valign="top">
+					<h2>BMP280 Pressure & Temp Sensor</h2>
+					<img src="../images/parts/BMP280.svg" style="height:100px; margin-left:20px">
+				</td>
+				<td>
+					<p>The BMP280 measures temperature, barometric pressure and altitude.</p>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<div id="wiringAnchor" class="anchor"></div>
+	<section id="wiring" class="card fade-in">
+		<div  class="header"><h1>Wiring</h1></div>
+		<img src="../images/wiring/weather_bb.svg" style="width:1024px">
+	</section>
+	<div id="programAnchor" class="anchor"></div>
+	<section id="program" class="card fade-in">
+		<div  class="header"><h1>Program</h1></div>
+		<code><pre>
+/***************************************************************************
+  This is a library for the BMP280 humidity, temperature & pressure sensor
+
+  Designed specifically to work with the Adafruit BMEP280 Breakout 
+  ----> http://www.adafruit.com/products/2651
+
+  These sensors use I2C or SPI to communicate, 2 or 4 pins are required 
+  to interface.
+
+  Adafruit invests time and resources providing this open source code,
+  please support Adafruit andopen-source hardware by purchasing products
+  from Adafruit!
+
+  Written by Limor Fried & Kevin Townsend for Adafruit Industries.  
+  BSD license, all text above must be included in any redistribution
+ ***************************************************************************/
+
+#include <Wire.h>
+#include <SPI.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BMP280.h>
+
+#define BMP_SCK 13
+#define BMP_MISO 12
+#define BMP_MOSI 11 
+#define BMP_CS 10
+
+//Adafruit_BMP280 bme; // I2C
+//Adafruit_BMP280 bme(BMP_CS); // hardware SPI
+Adafruit_BMP280 bme(BMP_CS, BMP_MOSI, BMP_MISO,  BMP_SCK);
+  
+void setup() {
+  Serial.begin(9600);
+  Serial.println(F("BMP280 test"));
+  
+  if (!bme.begin()) {  
+    Serial.println("Could not find a valid BMP280 sensor, check wiring!");
+    while (1);
+  }
+}
+  
+void loop() {
+    Serial.print("Temperature = ");
+    Serial.print(bme.readTemperature());
+    Serial.println(" *C");
+    
+    Serial.print("Pressure = ");
+    Serial.print(bme.readPressure());
+    Serial.println(" Pa");
+
+    Serial.print("Approx altitude = ");
+    Serial.print(bme.readAltitude(101300.25)); // this should be adjusted to your local forcase
+    Serial.println(" m");
+    
+    Serial.println();
+    delay(2000);
+}
+		</pre></code>
+	</section>
+	<div id="notWorkingAnchor" class="anchor"></div>
+	<section id="notWorking" class="card fade-in">
+		<div class="header"><h1>Not Working</h1></div>
+		<h2>Program not uploaded.</h2>
+		<p>Check the make sure the proper serial port is selected. You select the serial port using the menu items tools > serial port.</p>
+		<h2>SPI Pins Switched.</h2>
+		<p>
+			The BMP280 sensor will not work if the SPI pins are not properly connected. Make sure the pins are connected to the Arduino as follows:
+			<ul>
+			<li>SCK -> D13
+			<li>SDO -> D12
+			<li>SDI -> D11
+			<li>CS  -> D10
+			</ul>
+		</p>
+	</section>
+	<div id="goingFurtherAnchor" class="anchor"></div>
+	<section id="goingFurther" class="card fade-in">
+		<div class="header"><h1>Going Further</h1></div>
+		<h2>Add LEDs</h2>
+		<p>
+			Add LEDs to your circuit, one for each touch pad. Program the Arduino to light an LED when the temperature rises above a threshold. 
+		</p>
+		<h2>Add Sound</h2>
+		<p>
+			Add a speaker to your circuit and program it to play a note when the temperature rises above a threshold.
+		</p>
+	</section>
+	<section id="footer"></footer>
+</body>
+</html>

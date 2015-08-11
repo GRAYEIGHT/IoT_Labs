@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='0.7in' height='0.6in' viewBox='0 0 50.4 43.2' >
+<g partID='854329410'><g transform='translate(0,43.2)' ><g transform='matrix(0,-1,1,0,0,0)'  ><g transform="matrix(1, 0, 0, 1, 0, -309.6)">
+<g id="breadboard">
+<g>
+<g transform="matrix(1, 0, 0, 1, 0, -481.888)">
+<rect fill="url(#linearGradient4129)" width="4.32" fill-opacity="1" id="rect3879" x="19.44" height="3.6" y="835.408" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, 0, -481.888)">
+<rect fill="url(#linearGradient4167)" width="4.32" fill-opacity="1" id="rect3909" x="26.64" height="3.6" y="835.408" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, 0, -481.888)">
+<rect fill="url(#linearGradient4169)" width="4.32" fill-opacity="1" id="rect3913" x="12.24" height="3.6" y="835.408" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, 0, -481.888)">
+<rect fill="url(#linearGradient3869)" width="37.44" stroke-width="0.36" fill-opacity="1" rx="3.6" stroke-opacity="1" stroke="#000000" id="rect3203" x="2.88" height="37.44" y="797.968" style="fill-rule:evenodd;stroke-miterlimit:4;stroke-dasharray:none;display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, -1.52588e-07, 3.59998)">
+<path fill="#333333" d="m11.16,343.8a2.16,2.16,0,1,1,-4.32,0,2.16,2.16,0,1,1,4.32,0z" stroke="none" id="path3922" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, 25.2, 3.59998)">
+<path fill="#333333" d="m11.16,343.8a2.16,2.16,0,1,1,-4.32,0,2.16,2.16,0,1,1,4.32,0z" stroke="none" id="path3924" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, -1.52588e-07, -21.6)">
+<path fill="#333333" d="m11.16,343.8a2.16,2.16,0,1,1,-4.32,0,2.16,2.16,0,1,1,4.32,0z" stroke="none" id="path3926" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, 25.2, -21.6)">
+<path fill="#333333" d="m11.16,343.8a2.16,2.16,0,1,1,-4.32,0,2.16,2.16,0,1,1,4.32,0z" stroke="none" id="path3928" style="display:inline"/>
+</g>
+<g transform="scale(-1,-1)">
+<rect fill="url(#linearGradient4171)" width="4.32" fill-opacity="1" id="rect4131" x="-16.56" height="3.6" y="-316.08" style="display:inline"/>
+</g>
+<g transform="scale(-1,-1)">
+<rect fill="url(#linearGradient4173)" width="4.32" fill-opacity="1" id="rect4133" x="-30.96" height="3.6" y="-316.08" style="display:inline"/>
+</g>
+<g transform="scale(-1,-1)">
+<rect fill="none" width="5.04" stroke="none" id="connector5pin" x="-31.32" height="5.04" y="-315.72" style="display:inline"/>
+</g>
+<g transform="scale(-1,-1)">
+<rect fill="none" width="5.04" stroke="none" id="connector4pin" x="-16.92" height="5.04" y="-315.72" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, -1.52588e-07, 3.59998)">
+<path fill="#000000" d="M42.48,331.2A20.88,20.88,0,1,1,0.72,331.2,20.88,20.88,0,1,1,42.48,331.2z" stroke="none" id="path3932" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, -1.52588e-07, 3.59998)">
+<path fill="url(#linearGradient4009)" fill-opacity="1" d="M42.48,331.2A20.88,20.88,0,1,1,0.72,331.2,20.88,20.88,0,1,1,42.48,331.2z" stroke="none" id="path4001" style="display:inline"/>
+</g>
+<g transform="matrix(1, 0, 0, 1, -1.52588e-07, 3.59998)">
+<path fill="none" stroke-width="5.76" stroke-opacity="1" d="m39.6,331.2a18,18,0,1,1,-36,0,18,18,0,1,1,36,0z" stroke="url(#linearGradient3944)" id="path3936" style="stroke-miterlimit:4;stroke-dasharray:none;display:inline"/>
+</g>
+<rect fill="none" width="5.04" stroke="none" id="connector1pin" x="11.88" height="5.04" y="353.88" style="display:inline"/>
+<rect fill="none" width="5.04" stroke="none" id="connector2pin" x="19.08" height="5.04" y="353.88" style="display:inline"/>
+<rect fill="none" width="5.04" stroke="none" id="rect4029" x="19.08" height="5.04" y="353.88" style="display:inline"/>
+<rect fill="none" width="5.04" stroke="none" id="connector3pin" x="26.28" height="5.04" y="353.88" style="display:inline"/>
+<g transform="matrix(0.866025, 0.5, -0.5, 0.866025, 168.494, 37.1724)">
+<path fill="url(#radialGradient4175)" fill-opacity="1" d="M36.72,331.2A15.12,15.12,0,1,1,6.48,331.2,15.12,15.12,0,1,1,36.72,331.2z" stroke="none" id="path3954" style="display:inline"/>
+</g>
+<path fill="#cccccc" fill-opacity="1" d="m29.875,320.467c-1.03311,-0.596472,-2.34049,-0.24616,-2.93695,0.786952l-8.02829,11.1554c-0.158703,0.178976,-0.303187,0.375136,-0.427451,0.590368,-0.994112,1.72185,-0.404162,3.92358,1.31769,4.91769,1.72185,0.994112,3.92358,0.40416,4.91769,-1.31769,0.124264,-0.215232,0.2219,-0.43844,0.297548,-0.665368l5.64672,-12.5304c0.596468,-1.03311,0.246158,-2.34049,-0.786954,-2.93695z" stroke="none" id="path3976" style="display:inline"/>
+<path fill="none" stroke-width="0.36" stroke-opacity="0.42857145" d="M27.7329,321.297,19.1059,333.36" stroke="#ffffff" id="path3983" style="stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"/>
+<g transform="matrix(0.866025, 0.5, -0.5, 0.866025, 168.494, 37.1724)">
+<path fill="none" stroke-width="0.36" stroke-opacity="0.08994709" d="m12.321,341.737a14.04,14.04,0,0,1,6.51114,-24.3012" stroke="url(#linearGradient4177)" id="path3985" style="stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;display:inline"/>
+</g>
+</g>
+</g>
+</g>
+</g></g></g></svg>

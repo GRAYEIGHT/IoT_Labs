@@ -1,0 +1,23 @@
+application: gray8lib
+version: 2
+runtime: go
+api_version: go1
+
+handlers:
+- url: /css
+  static_dir: css
+  
+- url: /fonts
+  static_dir: fonts
+  
+- url: /images
+  static_dir: images
+  
+- url: /js
+  static_dir: js
+  
+- url: /labs
+  static_dir: labs
+  
+- url: /.*
+  script: _go_app

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="62px" height="60px" viewBox="0 0 62 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(2.000000, 0.000000)">
+            <g id="breadboard">
+                <g id="Group">
+                    <path d="M7.4,1.2 C3.4112,1.2 0.2,4.4112 0.2,8.4 L0.2,51.6 C0.2,55.5888 3.4112,58.8 7.4,58.8 L50.6,58.8 C54.5888,58.8 57.8,55.5888 57.8,51.6 L57.8,8.4 C57.8,4.4112 54.5888,1.2 50.6,1.2 L7.4,1.2 L7.4,1.2 Z M7.4,3.725 C9.98469,3.725 12.075,5.8153 12.075,8.4 C12.075,10.9847 9.98469,13.075 7.4,13.075 C4.81531,13.075 2.725,10.9847 2.725,8.4 C2.725,5.8153 4.81531,3.725 7.4,3.725 L7.4,3.725 Z M50.6,3.725 C53.18469,3.725 55.275,5.8153 55.275,8.4 C55.275,10.9847 53.18469,13.075 50.6,13.075 C48.01531,13.075 45.925,10.9847 45.925,8.4 C45.925,5.8153 48.01531,3.725 50.6,3.725 L50.6,3.725 Z" id="rect9804" stroke="#000000" stroke-width="0.216" fill="#215B78" sketch:type="MSShapeGroup"></path>
+                    <g transform="translate(21.000000, 22.500000) rotate(90.000000) translate(-21.000000, -22.500000) translate(19.500000, 21.500000)" id="rect8962" fill="#000000" sketch:type="MSShapeGroup">
+                        <rect x="0.72" y="0.2" width="2.16" height="1.44"></rect>
+                    </g>
+                    <g transform="translate(21.000000, 19.500000) rotate(90.000000) translate(-21.000000, -19.500000) translate(19.500000, 18.500000)" id="rect11661" fill="#000000" sketch:type="MSShapeGroup">
+                        <rect x="0.12" y="0.2" width="2.16" height="1.44"></rect>
+                    </g>
+                    <g transform="translate(21.000000, 26.500000) rotate(90.000000) translate(-21.000000, -26.500000) translate(19.500000, 25.500000)" id="rect11665" fill="#000000" sketch:type="MSShapeGroup">
+                        <rect x="0.32" y="0.2" width="2.16" height="1.44"></rect>
+                    </g>
+                    <g transform="translate(37.000000, 22.500000) rotate(-90.000000) translate(-37.000000, -22.500000) translate(35.500000, 21.500000)" id="rect11669" fill="#000000" sketch:type="MSShapeGroup">
+                        <rect x="0.12" y="0.2" width="2.16" height="1.44"></rect>
+                    </g>
+                    <g transform="translate(37.000000, 19.500000) rotate(-90.000000) translate(-37.000000, -19.500000) translate(35.500000, 18.500000)" id="rect11671" fill="#000000" sketch:type="MSShapeGroup">
+                        <rect x="0.72" y="0.2" width="2.16" height="1.44"></rect>
+                    </g>
+                    <g transform="translate(37.000000, 26.500000) rotate(-90.000000) translate(-37.000000, -26.500000) translate(35.500000, 25.500000)" id="rect11673" fill="#000000" sketch:type="MSShapeGroup">
+                        <rect x="0.52" y="0.2" width="2.16" height="1.44"></rect>
+                    </g>
+                    <g transform="translate(29.000000, 15.000000) scale(-1, -1) translate(-29.000000, -15.000000) translate(27.000000, 14.000000)" id="rect11693" fill="#000000" sketch:type="MSShapeGroup">
+                        <rect x="0.92" y="0.4" width="2.16" height="1.44"></rect>
+                    </g>
+                    <rect id="rect11697" fill="#000000" sketch:type="MSShapeGroup" x="27.92" y="30" width="2.16" height="1.44"></rect>
+                    <g transform="translate(32.400000, 48.200000)" id="connector5pin" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <rect id="rect9196" fill="#DECD87" sketch:type="MSShapeGroup" x="35.12" y="50.52" width="2.16" height="2.16"></rect>
+                    <path d="M35.12,52.68 L35.39,52.41 L35.39,50.79 L37.01,50.79 L37.28,50.52 L35.12,50.52 L35.12,52.68 Z" id="path9198" fill="#E9DDAF" sketch:type="MSShapeGroup"></path>
+                    <path d="M37.28,50.52 L37.01,50.79 L37.01,52.41 L35.39,52.41 L35.12,52.68 L37.28,52.68 L37.28,50.52 Z" id="path9200" fill="#C8AB37" sketch:type="MSShapeGroup"></path>
+                    <g transform="translate(25.200000, 48.200000)" id="connector4pin" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <g transform="translate(18.000000, 48.200000)" id="connector3pin" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <g transform="translate(10.800000, 48.200000)" id="connector2pin" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <g transform="translate(3.600000, 48.200000)" id="connector1pin" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <g transform="translate(46.800000, 48.200000)" id="path9261" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <g transform="translate(39.600000, 48.200000)" id="path9263" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <rect id="rect9275" fill="#DECD87" sketch:type="MSShapeGroup" x="6.32" y="50.52" width="2.16" height="2.16"></rect>
+                    <path d="M6.32,52.68 L6.59,52.41 L6.59,50.79 L8.21,50.79 L8.48,50.52 L6.32,50.52 L6.32,52.68 Z" id="path9277" fill="#FFEEAA" sketch:type="MSShapeGroup"></path>
+                    <path d="M8.48,50.52 L8.21,50.79 L8.21,52.41 L6.59,52.41 L6.32,52.68 L8.48,52.68 L8.48,50.52 Z" id="path9279" fill="#C8AB37" sketch:type="MSShapeGroup"></path>
+                    <rect id="rect9283" fill="#DECD87" sketch:type="MSShapeGroup" x="13.52" y="50.52" width="2.16" height="2.16"></rect>
+                    <path d="M13.52,52.68 L13.79,52.41 L13.79,50.79 L15.41,50.79 L15.68,50.52 L13.52,50.52 L13.52,52.68 Z" id="path9285" fill="#E9DDAF" sketch:type="MSShapeGroup"></path>
+                    <path d="M15.68,50.52 L15.41,50.79 L15.41,52.41 L13.79,52.41 L13.52,52.68 L15.68,52.68 L15.68,50.52 Z" id="path9287" fill="#C8AB37" sketch:type="MSShapeGroup"></path>
+                    <rect id="rect9291" fill="#DECD87" sketch:type="MSShapeGroup" x="20.72" y="50.52" width="2.16" height="2.16"></rect>
+                    <path d="M20.72,52.68 L20.99,52.41 L20.99,50.79 L22.61,50.79 L22.88,50.52 L20.72,50.52 L20.72,52.68 Z" id="path9293" fill="#E9DDAF" sketch:type="MSShapeGroup"></path>
+                    <path d="M22.88,50.52 L22.61,50.79 L22.61,52.41 L20.99,52.41 L20.72,52.68 L22.88,52.68 L22.88,50.52 Z" id="path9295" fill="#C8AB37" sketch:type="MSShapeGroup"></path>
+                    <rect id="rect9299" fill="#DECD87" sketch:type="MSShapeGroup" x="27.92" y="50.52" width="2.16" height="2.16"></rect>
+                    <path d="M27.92,52.68 L28.19,52.41 L28.19,50.79 L29.81,50.79 L30.08,50.52 L27.92,50.52 L27.92,52.68 Z" id="path9301" fill="#E9DDAF" sketch:type="MSShapeGroup"></path>
+                    <path d="M30.08,50.52 L29.81,50.79 L29.81,52.41 L28.19,52.41 L27.92,52.68 L30.08,52.68 L30.08,50.52 Z" id="path9303" fill="#C8AB37" sketch:type="MSShapeGroup"></path>
+                    <g transform="translate(46.800000, 48.200000)" id="connector7pin" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <g transform="translate(39.600000, 48.200000)" id="connector6pin" fill="#000000" sketch:type="MSShapeGroup">
+                        <path d="M6.68,3.4 C6.68,4.99058008 5.39058008,6.28 3.8,6.28 C2.20941992,6.28 0.92,4.99058008 0.92,3.4 C0.92,1.80941992 2.20941992,0.52 3.8,0.52 C5.39058008,0.52 6.68,1.80941992 6.68,3.4 L6.68,3.4 Z"></path>
+                    </g>
+                    <rect id="rect9315" fill="#DECD87" sketch:type="MSShapeGroup" x="42.32" y="50.52" width="2.16" height="2.16"></rect>
+                    <path d="M42.32,52.68 L42.59,52.41 L42.59,50.79 L44.21,50.79 L44.48,50.52 L42.32,50.52 L42.32,52.68 Z" id="path9317" fill="#E9DDAF" sketch:type="MSShapeGroup"></path>
+                    <path d="M44.48,50.52 L44.21,50.79 L44.21,52.41 L42.59,52.41 L42.32,52.68 L44.48,52.68 L44.48,50.52 Z" id="path9319" fill="#C8AB37" sketch:type="MSShapeGroup"></path>
+                    <rect id="rect9323" fill="#DECD87" sketch:type="MSShapeGroup" x="49.52" y="50.52" width="2.16" height="2.16"></rect>
+                    <path d="M49.52,52.68 L49.79,52.41 L49.79,50.79 L51.41,50.79 L51.68,50.52 L49.52,50.52 L49.52,52.68 Z" id="path9325" fill="#E9DDAF" sketch:type="MSShapeGroup"></path>
+                    <path d="M51.68,50.52 L51.41,50.79 L51.41,52.41 L49.79,52.41 L49.52,52.68 L51.68,52.68 L51.68,50.52 Z" id="path9327" fill="#C8AB37" sketch:type="MSShapeGroup"></path>
+                    <g transform="translate(2.600000, 3.600000)" id="path6949" stroke="#ECC98A" stroke-width="1.08" sketch:type="MSShapeGroup">
+                        <path d="M9.48,4.8 C9.48,7.38469263 7.38469263,9.48 4.8,9.48 C2.21530737,9.48 0.12,7.38469263 0.12,4.8 C0.12,2.21530737 2.21530737,0.12 4.8,0.12 C7.38469263,0.12 9.48,2.21530737 9.48,4.8 L9.48,4.8 Z"></path>
+                    </g>
+                    <g transform="translate(1.600000, 2.600000)" id="path6970" stroke="#FFFFFF" stroke-width="0.144" sketch:type="MSShapeGroup">
+                        <path d="M11.56,5.8 C11.56,7.85784983 10.4621503,9.7593815 8.68000004,10.7883064 C6.89784982,11.8172314 4.70215018,11.8172314 2.91999996,10.7883064 C1.13784975,9.7593815 0.0399999566,7.85784983 0.04,5.8 C0.0399999566,3.74215017 1.13784975,1.8406185 2.91999996,0.811693573 C4.70215018,-0.217231353 6.89784982,-0.217231353 8.68000004,0.811693573 C10.4621503,1.8406185 11.56,3.74215017 11.56,5.8 L11.56,5.8 Z"></path>
+                    </g>
+                    <g transform="translate(45.800000, 3.600000)" id="path11465" stroke="#ECC98A" stroke-width="1.08" sketch:type="MSShapeGroup">
+                        <path d="M9.48,4.8 C9.48,7.38469263 7.38469263,9.48 4.8,9.48 C2.21530737,9.48 0.12,7.38469263 0.12,4.8 C0.12,2.21530737 2.21530737,0.12 4.8,0.12 C7.38469263,0.12 9.48,2.21530737 9.48,4.8 L9.48,4.8 Z"></path>
+                    </g>
+                    <g transform="translate(44.800000, 2.600000)" id="path11467" stroke="#FFFFFF" stroke-width="0.144" sketch:type="MSShapeGroup">
+                        <path d="M11.56,5.8 C11.56,7.85784983 10.4621503,9.7593815 8.68000004,10.7883064 C6.89784982,11.8172314 4.70215018,11.8172314 2.91999996,10.7883064 C1.13784975,9.7593815 0.0399999566,7.85784983 0.04,5.8 C0.0399999566,3.74215017 1.13784975,1.8406185 2.91999996,0.811693573 C4.70215018,-0.217231353 6.89784982,-0.217231353 8.68000004,0.811693573 C10.4621503,1.8406185 11.56,3.74215017 11.56,5.8 L11.56,5.8 Z"></path>
+                    </g>
+                    <g transform="translate(6.500000, 44.000000) rotate(-90.000000) translate(-6.500000, -44.000000) translate(1.500000, 40.500000)" id="text11701" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <g>
+                            <text id="VIN">
+                                <tspan x="0.28" y="5.84000015">VIN</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g transform="translate(14.500000, 44.000000) rotate(-90.000000) translate(-14.500000, -44.000000) translate(9.500000, 40.500000)" id="text11705" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <g>
+                            <text id="3Vo">
+                                <tspan x="0.28" y="5.05999947">3Vo</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g transform="translate(50.500000, 45.000000) rotate(-90.000000) translate(-50.500000, -45.000000) translate(46.500000, 41.500000)" id="text11709" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <g>
+                            <text id="CS">
+                                <tspan x="0.28" y="5.26000023">CS</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g transform="translate(35.500000, 43.000000) rotate(-90.000000) translate(-35.500000, -43.000000) translate(29.500000, 39.500000)" id="text11713" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <g>
+                            <text id="SDO">
+                                <tspan x="0.28" y="5.47000122">SDO</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g transform="translate(28.500000, 43.000000) rotate(-90.000000) translate(-28.500000, -43.000000) translate(22.500000, 39.500000)" id="text11717" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <g>
+                            <text id="SCK">
+                                <tspan x="0.279998779" y="5.65999985">SCK</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g transform="translate(42.500000, 44.000000) rotate(-90.000000) translate(-42.500000, -44.000000) translate(37.500000, 40.500000)" id="text11721" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <g>
+                            <text id="SDI">
+                                <tspan x="0.28" y="5.86999893">SDI</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g transform="translate(21.500000, 42.500000) rotate(-90.000000) translate(-21.500000, -42.500000) translate(15.000000, 39.000000)" id="text11725" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <g>
+                            <text id="GND">
+                                <tspan x="0.28" y="5.06999969">GND</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <path d="M14.564,57 L13.124,55.2 L16.004,55.2 L14.564,57 Z" id="path9389" stroke="#FFFFFF" stroke-width="0.36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <path d="M43.4,57 L41.96,55.2 L44.84,55.2 L43.4,57 Z" id="path11747" stroke="#FFFFFF" stroke-width="0.36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <path d="M50.6,55.2 L52.04,57 L49.16,57 L50.6,55.2 Z" id="path11749" stroke="#FFFFFF" stroke-width="0.36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <path d="M36.2,55.2 L37.64,57 L34.76,57 L36.2,55.2 Z" id="path11751" stroke="#FFFFFF" stroke-width="0.36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <path d="M29,55.2 L30.44,57 L27.56,57 L29,55.2 Z" id="path11753" stroke="#FFFFFF" stroke-width="0.36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <path d="M21.8,55.2 L23.24,57 L20.36,57 L21.8,55.2 Z" id="path11755" stroke="#FFFFFF" stroke-width="0.36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <path d="M7.4,55.2 L8.84,57 L5.96,57 L7.4,55.2 Z" id="path11757" stroke="#FFFFFF" stroke-width="0.36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <g id="text11759" transform="translate(20.000000, 0.000000)" font-size="5" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <text id="BMP280">
+                            <tspan x="0.440000534" y="5.15999985">BMP280</tspan>
+                        </text>
+                    </g>
+                    <g id="text11763" transform="translate(20.000000, 5.000000)" font-size="4" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <text id="Pressure-&amp;">
+                            <tspan x="0.440000534" y="4.11999989">Pressure &amp;</tspan>
+                        </text>
+                    </g>
+                    <g id="text11767" transform="translate(17.000000, 9.000000)" font-size="4" font-family="Helvetica" fill="#FFFFFF" sketch:type="MSTextLayer" font-weight="normal">
+                        <text id="Temp-Sensor">
+                            <tspan x="0.440000534" y="4.07999992">Temp</tspan>
+                            <tspan x="10.6646099" y="4.07999992" fill="#000000"> </tspan>
+                            <tspan x="11.775938" y="4.07999992">Sensor</tspan>
+                        </text>
+                    </g>
+                    <path d="M55.1885742,18.022182 C55.1661262,17.881414 55.0898774,17.841422 54.9060002,17.782414 C54.7661902,17.737694 53.8298002,17.439342 53.8298002,17.439342 C53.8298002,17.439342 53.1774732,17.19299 52.6936602,17.541606 C52.6284442,17.588406 52.5611802,17.641942 52.4932462,17.699094 C52.5503342,17.631174 52.6036152,17.563638 52.6505082,17.498406 C52.9981352,17.01407 52.7505802,16.362006 52.7505802,16.362006 C52.7505802,16.362006 52.4506532,15.426254 52.4055752,15.286496 C52.3461912,15.102624 52.306072,15.026544 52.1654242,15.004464 C52.0248082,14.982224 51.9631182,15.042464 51.8502902,15.199136 C51.7644446,15.318224 51.1913772,16.116496 51.1913772,16.116496 C51.1913772,16.116496 50.7555072,16.660944 50.9375142,17.228736 C50.9619702,17.305216 50.9920022,17.385816 51.025467,17.468056 C50.978395,17.392696 50.9306814,17.321176 50.883144,17.256448 C50.52981,16.776256 49.833304,16.810048 49.833304,16.810048 C49.833304,16.810048 48.850672,16.806048 48.703754,16.806048 C48.510646,16.805664 48.425865,16.820368 48.361306,16.9472 C48.29673,17.074144 48.334994,17.151368 48.449086,17.30712 C48.535802,17.425592 49.11795,18.217328 49.11795,18.217328 C49.11795,18.217328 49.501144,18.800072 50.097229,18.802536 C50.177325,18.80288 50.263183,18.799336 50.351467,18.792936 C50.2655238,18.814376 50.182881,18.837656 50.106921,18.862776 C49.540955,19.050432 49.357917,19.723328 49.357917,19.723328 C49.357917,19.723328 49.050585,20.65668 49.004809,20.796238 C48.944785,20.979782 48.932521,21.065006 49.033233,21.165574 C49.134067,21.266158 49.219215,21.253814 49.402662,21.193334 C49.542225,21.147494 50.474982,20.83847 50.474982,20.83847 C50.474982,20.83847 51.147629,20.654078 51.334149,20.087782 C51.359205,20.011782 51.382269,19.929398 51.403525,19.843526 C51.397445,19.931686 51.393981,20.017294 51.394429,20.097406 C51.397949,20.693558 51.981379,21.075654 51.981379,21.075654 C51.981379,21.075654 52.774085,21.656262 52.892607,21.74295 C53.048685,21.856686 53.125913,21.894694 53.252742,21.829966 C53.379636,21.765166 53.394099,21.680374 53.393293,21.48719 C53.3927946,21.340398 53.387133,20.3577 53.387133,20.3577 C53.387133,20.3577 53.419781,19.66114 52.938842,19.30873 C52.874186,19.26145 52.802816,19.213826 52.727553,19.167026 C52.8097138,19.200226 52.890143,19.229986 52.966469,19.254194 C53.534573,19.435226 54.078189,18.998418 54.078189,18.998418 C54.078189,18.998418 54.87559,18.423994 54.994499,18.337826 C55.15091,18.224658 55.210956,18.162866 55.188585,18.022394 L55.1885742,18.022182 Z M51.8042142,17.298662 C51.9113802,17.315462 51.9645912,17.543478 51.9228872,17.807766 C51.8813672,18.072046 51.7607172,18.27259 51.6534772,18.255742 C51.5462482,18.238782 51.4930682,18.01091 51.5347292,17.74663 C51.5763372,17.482278 51.6969322,17.281646 51.8042152,17.298662 L51.8042142,17.298662 Z M50.4315642,17.999526 C50.4807962,17.902766 50.7139332,17.922646 50.9524622,18.043926 C51.1909682,18.16515 51.3444572,18.341894 51.2953282,18.43851 C51.2460722,18.535326 51.0129262,18.51539 50.7743432,18.39427 C50.5358252,18.272966 50.3823692,18.09623 50.4315632,17.999478 L50.4315642,17.999526 Z M51.1553902,19.317626 C50.9663562,19.506946 50.7508122,19.598314 50.6739502,19.521578 C50.5972142,19.445018 50.6882782,19.229298 50.8772982,19.039914 C51.0662682,18.850506 51.2817902,18.759138 51.3585992,18.835874 C51.4353352,18.912514 51.3443832,19.128234 51.1553902,19.317626 L51.1553902,19.317626 Z M52.1965102,19.76141 C52.0998022,19.81077 51.9228872,19.65761 51.8012702,19.419298 C51.6795132,19.18105 51.6591932,18.947714 51.7558222,18.898378 C51.852403,18.849098 52.0293912,19.002322 52.1511062,19.24049 C52.2728202,19.478746 52.2931402,19.711978 52.1965062,19.76141 L52.1965102,19.76141 Z M52.4475152,18.65775 C52.1832722,18.69983 51.9552332,18.64703 51.9381142,18.539974 C51.9211782,18.432742 52.1214962,18.311726 52.3856522,18.26975 C52.6499812,18.22751 52.8779362,18.28031 52.8949562,18.38755 C52.9120762,18.494574 52.7117462,18.615654 52.4475142,18.65775 L52.4475152,18.65775 Z" id="path12631" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                    <rect id="rect11476" stroke="#3D3D3D" stroke-width="0.288" fill="#000000" sketch:type="MSShapeGroup" x="21.8" y="15.6" width="14.4" height="14.4" rx="0.72"></rect>
+                    <g transform="translate(28.000000, 22.000000)" id="path11508" fill="#0B2228" sketch:type="MSShapeGroup">
+                        <path d="M1.72,0.8 C1.72,1.19764502 1.39764502,1.52 1,1.52 C0.60235498,1.52 0.28,1.19764502 0.28,0.8 C0.28,0.40235498 0.60235498,0.08 1,0.08 C1.39764502,0.08 1.72,0.40235498 1.72,0.8 L1.72,0.8 Z"></path>
+                    </g>
+                    <g id="g11820" transform="translate(1.000000, 15.000000)" fill="#000000" sketch:type="MSShapeGroup" fill-opacity="0.10326089">
+                        <rect id="rect11789" x="22.96" y="18.24" width="10.08" height="5.75997"></rect>
+                        <rect id="rect11791" x="11.44" y="17.88" width="10.08" height="5.75997"></rect>
+                        <rect id="rect11793" x="0.28" y="18.96" width="10.08" height="5.75997"></rect>
+                        <rect id="rect11798" x="1.36" y="9.96" width="9.36" height="5.04"></rect>
+                        <rect id="rect11800" x="0.64" y="2.04" width="10.08" height="5.75997"></rect>
+                        <g id="Group" transform="translate(41.000000, 18.000000) rotate(-90.000000) translate(-41.000000, -18.000000) translate(36.000000, 15.000000)">
+                            <rect id="rect11802" x="0.08" y="0.08" width="9.36" height="5.04"></rect>
+                        </g>
+                        <g id="Group" transform="translate(49.500000, 18.500000) rotate(90.000000) translate(-49.500000, -18.500000) translate(44.000000, 15.000000)">
+                            <rect id="rect11804" x="0.56" y="0.52" width="10.08" height="5.75997"></rect>
+                        </g>
+                        <g id="Group" transform="translate(51.000000, 7.500000) rotate(90.000000) translate(-51.000000, -7.500000) translate(45.500000, 4.500000)">
+                            <rect id="rect11806" x="0.04" y="0.08" width="10.08" height="5.75997"></rect>
+                        </g>
+                        <rect id="rect11808" x="37.36" y="4.92" width="9.36" height="5.04"></rect>
+                        <g id="Group" transform="translate(15.000000, 5.000000) rotate(-90.000000) translate(-15.000000, -5.000000) translate(10.000000, 2.000000)">
+                            <rect id="rect11810" x="0.04" y="0.88" width="9.36" height="5.04"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,849 @@
+@font-face {
+	font-family: "socicons";
+	src: url("../fonts/socicon.eot");
+	src: url('../fonts/socicon.eot?#iefix') format('embedded-opentype');
+	src: url("../fonts/socicon.ttf") format("truetype");
+	src: url("../fonts/socicon.woff") format("woff");	
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+[data-icon]:before {
+	font-family: 'socicons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family:'Roboto',arial,sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	margin:0px;
+	color:rgb(128,128,128);
+	background-color:rgb(255,255,255);
+}
+
+body.lab{ 
+	background-color:rgb(240,240,240);
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:28px;
+	font-weight:200;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:24px;
+	font-weight:normal;
+	margin-top:10px;
+	margin-bottom:5px;
+}
+
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	margin-top:10px;
+	margin-bottom:5px;
+}
+
+p {
+	font-size:18px;
+	line-height:1.5;
+	margin-top:0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+section {
+	min-width:1024px;
+	height:auto;
+	background-color:rgb(255,255,255);
+}
+
+code {
+	font-size:16px;
+	color:rgb(0,0,0);
+}
+
+pre {
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.anchor {
+	margin-top: -50px;
+	padding-bottom: 50px;
+	pointer-events: none;
+}
+
+.spacer {
+	height:50px;
+}
+
+section .header {
+	font-family: 'Open Sans', sans-serif;
+	font-size:32px;
+	font-weight:200;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-bottom:1px solid rgb(240,240,240);
+}
+
+/* -----  Lesson cards  -----*/
+
+section.card {
+	width:90%;
+	font-size:21px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+	padding-bottom:10px;
+	border-radius: 4px;
+	-moz-box-shadow:    1px 1px 2px  #ccc;
+	-webkit-box-shadow: 1px 1px 2px  #ccc;
+	box-shadow:         1px 1px 2px  #ccc;
+}
+
+section.card h1, h2, p{
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+section.card h1{
+	color:rgb(0,0,0);
+}
+
+section.card a {
+	color:rgb(128,128,128);
+}
+
+section.card .labRow {
+	height:60px;
+	background-color:rgb(250,250,250);
+}
+
+section.card .labRow:hover {
+	background-color:rgb(255,255,255);
+}
+
+section.card .labRow td{
+	border-bottom:1px solid rgb(240,240,240);
+}
+
+section.card th {
+	text-align:left;
+	font-weight:normal;
+	border-bottom:1px solid rgb(240,240,240);
+}
+
+
+section#home {
+	margin-top:20px;
+	text-align:center;
+	color:rgb(128,128,128);
+}
+
+section#home p {
+	font-size:18px;
+	font-weight:normal;
+}
+
+section#home a {
+	color:rgb(255,255,255);
+}
+
+section#home .title {
+	font-size:42px;
+	font-weight:bold;
+	margin-top:60px;
+	color:rgb(0,0,0);
+}
+
+section#home .subTitle {
+	font-size:32px;
+	font-weight:normal;
+	margin-top:10px;
+}
+
+section#home .version {
+	font-size:28px;
+	font-weight:normal;
+	margin-bottom:20px;
+}
+
+section#home .start {
+	width:250px;
+	height:40px;
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:24px;
+	font-weight:normal;
+	line-height:40px;
+	background-color:rgb(128,128,128);
+	color:rgb(255,255,255);
+	border-radius: 4px;
+}
+
+section#home .start:hover {
+	width:255px;
+	height:45px;
+	line-height:45px;
+	background-color:rgb(96,96,96);
+}
+
+section#home .copyright {
+	font-size:12px;
+	font-weight:normal;
+	margin-top:300px;
+}
+
+section#nav {
+	position: fixed;
+	top:40px;
+	left:-500px;
+	min-width:300px;
+	padding:0px;
+	color:rgb(255,255,255);
+	background-color:rgb(74,144,226);
+	z-index:200;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+section#nav.open{
+	left:0px;
+}
+
+section#nav h3 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+	padding:10px;
+	color: rgb(255,255,255);
+	background: #0d77b6;	
+}
+
+section#nav a {
+	display: block;
+	padding:10px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: normal;
+	border-bottom: 1px solid #258ecd;
+}
+
+section#nav  a:hover {
+	background: #258ecd;
+}
+
+section#menu {
+	position:fixed;
+	top:0px;
+	height:40px;
+	width:100%;
+	font-family: 'Open Sans', sans-serif;
+	color:rgb(255,255,255);
+	background-color:rgb(74,144,226);
+	z-index:100;
+}
+
+section#menu .menuItem {
+	float:left;
+	width:140px;
+	height:32px;
+	margin-left:10px;
+	color:rgb(255,255,255);
+	font-size:20px;
+}
+
+section .menu .menuItem.back {
+	float:right;
+	width:50px;
+	margin-right:5px;
+}
+
+section.intro {
+	margin-top:40px;
+}
+
+section.contactUs td{
+	width:30%;
+}
+
+section#title {
+	margin-top:60px;
+}
+
+section#title h1 {
+	font-size:42px;
+}
+
+section#title p {
+	margin-bottom:0px;
+}
+
+section#parts table {
+	margin-left:20px;
+	margin-right:20px;
+}
+
+section#parts table h2{
+	width:100%;
+	margin:0px;
+}
+
+section#parts table tr td{
+	height:60px;
+	border-bottom: 1px solid rgb(240,240,240);
+}
+
+section#parts table tr:last-child td{
+	border-bottom: none;
+}
+
+/* Wiring section */
+
+section#wiring img {
+	width:980px;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+/* Not Working section */
+
+section#notWorking h2 {
+	font-weight:bold;
+}
+
+/* Going Further section */
+
+section#goingFurther h2 {
+	font-weight:bold;
+}
+
+
+
+
+
+section#product h1 {
+	font-size:28px;
+	font-weight:normal;
+	margin-top:0px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:10px;
+	color:rgb(0,0,0);
+}
+
+section#product h2 {
+	margin-top:0px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+
+section#product p {
+	margin-top:0px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:10px;
+}
+
+/*   Work entry pages  */
+
+section#workEntry .content{
+	display:inline-block;
+	width:100%;
+	border-right: 1px solid rgb(240,240,240);
+	background-clor:rgb(255,255,255);
+}
+
+section#workEntry article {
+	min-height:300px;
+	margin-left:20px;
+	margin-top:20px;
+	margin-right:20px;
+	margin-bottom:20px;
+	color:rgb(128,128,128);
+	background-color:rgb(255,255,255);
+}
+
+section#workEntry .content .title{
+	font-family: 'Open Sans', sans-serif;
+	font-size:42px;
+	margin-bottom:10px;
+	color:rgb(0,0,0);
+}
+
+section#workEntry .content .subTitle{
+	font-family: 'Open Sans', sans-serif;
+	font-size:36px;
+	margin-bottom:20px;
+	color:rgb(128,128,128);
+}
+
+section#workEntry .content .author{
+	display:inline;
+	font-size:16px;
+	text-transform: uppercase;
+	margin-bottom:20px;
+	margin-right:20px;
+	color:rgb(0,128,0);
+}
+
+section#workEntry .content .date{
+	display:inline;
+	font-size:16px;
+	color:rgb(128,128,128);
+}
+
+section#workEntry .content p{
+	font-size:16px;
+	margin-top:20px;
+	margin-bottom:20px;
+	line-height:1.5;
+	color:rgb(128,128,128);
+}
+
+/*   Blog main page  */
+
+section#blog .content{
+	display:inline-block;
+	width:70%;
+	border-right: 1px solid rgb(240,240,240);
+	background-clor:rgb(255,255,255);
+}
+
+section#blog article {
+	margin-left:20px;
+	margin-top:20px;
+	margin-right:20px;
+	margin-bottom:40px;
+	color:rgb(128,128,128);
+	background-color:rgb(255,255,255);
+}
+
+section#blog .content .title{
+	font-family: 'Open Sans', sans-serif;
+	font-size:28px;
+	margin-bottom:20px;
+	color:rgb(0,0,0);
+}
+
+section#blog .content .title a{
+	color:rgb(0,0,0);
+}
+
+section#blog .content .title a:hover{
+	font-weight:bold;
+}
+
+section#blog .content .author{
+	display:inline;
+	font-size:16px;
+	text-transform: uppercase;
+	margin-bottom:20px;
+	margin-right:20px;
+	color:rgb(0,128,0);
+}
+
+section#blog .content .date{
+	display:inline;
+	font-size:16px;
+	color:rgb(128,128,128);
+}
+
+section#blog .content p{
+	font-size:16px;
+	margin-top:20px;
+	margin-bottom:20px;
+	line-height:1.5;
+	color:rgb(128,128,128);
+}
+
+section#blog .content .topics{
+	display:inline;
+	font-size:14px;
+	margin-bottom:20px;
+	margin-right:20px;
+}
+
+section#blog .content .topics a{
+	color:rgb(0,128,0);
+}
+
+section#blog .content .topics a:hover{
+	font-weight:bold;
+}
+
+section#blog .content .readMore{
+	float:right;
+	font-size:16px;
+	color:rgb(0,128,0);
+}
+
+section#blog .content .readMore:hover{
+	font-weight:bold;
+}
+
+section#blog .aside{
+	float:right;
+	width:27%;
+	background-clor:rgb(255,255,255);
+}
+
+section#blog .aside h3{
+	font-size:24px;
+	margin-bottom:10px;
+}
+
+section#blog .aside a{
+	display:block;
+	font-size:18px;
+	margin-bottom:5px;
+	color:rgb(0,128,0);
+}
+
+section#blog .aside a:hover{
+	font-weight:bold;
+}
+
+section#blog .footer {
+	background-color:rgb(255,255,255);
+}
+
+
+/*   Blog entry pages  */
+
+section#blogEntry .content{
+	display:inline-block;
+	width:70%;
+	border-right: 1px solid rgb(240,240,240);
+	background-clor:rgb(255,255,255);
+}
+
+section#blogEntry article {
+	min-height:300px;
+	margin-left:20px;
+	margin-top:20px;
+	margin-right:20px;
+	margin-bottom:40px;
+	color:rgb(128,128,128);
+	background-color:rgb(255,255,255);
+}
+
+section#blogEntry .content .title{
+	font-family: 'Open Sans', sans-serif;
+	font-size:42px;
+	margin-bottom:20px;
+	color:rgb(0,0,0);
+}
+
+section#blogEntry .content .author{
+	display:inline;
+	font-size:16px;
+	text-transform: uppercase;
+	margin-bottom:20px;
+	margin-right:20px;
+	color:rgb(0,128,0);
+}
+
+section#blogEntry .content .date{
+	display:inline;
+	font-size:16px;
+	color:rgb(128,128,128);
+}
+
+section#blogEntry .content p{
+	font-size:16px;
+	margin-top:20px;
+	margin-bottom:20px;
+	line-height:1.5;
+	color:rgb(128,128,128);
+}
+
+section#blogEntry .aside{
+	float:right;
+	width:27%;
+	background-clor:rgb(255,255,255);
+}
+
+section#blogEntry .aside h3{
+	font-size:24px;
+	margin-bottom:10px;
+}
+
+section#blogEntry .aside a{
+	display:block;
+	font-size:18px;
+	margin-bottom:5px;
+	color:rgb(0,128,0);
+}
+
+section#blogEntry .aside a:hover{
+	font-weight:bold;
+}
+
+section#blogEntry .footer {
+	background-color:rgb(255,255,255);
+}
+
+/* footer section */
+
+section#footer {
+	height:5px;
+	margin-top:30px;
+	padding-bottom:0px;
+	background-color:rgb(74,144,226);
+}
+
+
+
+
+.aboutText {
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.practiceContainer{
+	display:block;
+	float:left;
+//	width:45%;
+	margin-left:10px
+}
+
+.workTable {
+	width:100%;
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+
+.workCell {
+	font-family: 'Open Sans', sans-serif;
+	padding:5px;
+	height:180px;
+	background-color:rgb(196,196,196);
+	vertical-align:top;
+}
+
+.workCellTitle {
+	padding:5px;
+	line-height:30px;
+	color:rgb(255,255,255);
+	background-color:rgba(0,0,0,0.6);
+	opacity:0;
+	font-size:21px;
+	font-weight:normal;
+	transition: opacity 0.75s;
+}
+
+.workCell:hover > div{
+	opacity:1;
+}
+
+.contactInfo {
+	display:inline;
+	width:30%;
+}
+
+.emailInfo {
+	display:inline;
+	width:30%;
+}
+
+.contact {
+	font-size:28px;
+	font-weight:normal;
+	margin-top:10px;
+	margin-left:10px;
+}
+
+.section.contactUs p {
+	margin-left:10px;
+	font-size:18px;
+	font-weight: normal;
+	line-height:24px;
+}
+
+.follow {
+	float:left;
+	width:54px;
+	height:54px;
+	border-radius: 26px;
+	color:rgb(255,255,255);
+	background-color:rgb(128,128,128);
+	margin-right:10px;
+	font-size:36px;
+	line-height:60px;
+	text-align:center;
+}
+
+.follow:hover {
+	background-color:rgb(0,128,0);
+}
+
+.follow.twitter {
+	
+}
+
+.follow.facebook {
+	
+}
+
+.follow.linkedin {
+	font-size:28px;
+	line-height:56px;
+}
+
+.follow.pinterest {
+	font-size:30px;
+}
+
+.follow.instagram {
+	font-size:30px;
+}
+
+
+.search {
+	float:right;
+	width:32px;
+	height:32px;
+	border-left:1px solid rgb(192,192,192);
+	background-image: url("../images/Search.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 24px 24px;
+}
+
+.message {
+	width:90%;
+	height:32px;
+	margin-top:1px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:rgb(96,96,96);
+}
+
+.intro .left{
+	float:left;
+	font-weight:bold;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+}
+
+.intro .right {
+	float:right;
+	width:150px;
+}
+
+.intro .right a {
+	margin-left:20px;
+}
+
+.intro .right .twitter {
+	float:right;
+	height: 24px;
+	width: 24px;
+	opacity: 0.2;
+	background-image: url("../images/twitter.png");
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+}
+
+.intro .right .tumbler {
+	float:right;
+    height: 24px;
+	width: 24px;
+    opacity: 0.2;
+    background-image: url("../images/tumbler.png");
+    background-repeat: no-repeat;
+    background-size: 24px auto;
+}
+
+.intro .center {
+	position:absolute;
+	width:100%;
+	top:40%;
+	font-size:32px;
+	font-weight:bold;
+	text-align: center;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 3s; /* Firefox < 16 */
+         -ms-animation: fadein 3s; /* Internet Explorer */
+          -o-animation: fadein 3s; /* Opera < 12.1 */
+             animation: fadein 3s;
+}
+
+.cbp-spmenu a {
+	display: block;
+	color: #fff;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.cbp-spmenu a:hover {
+	background: #258ecd;
+}
+
+.cbp-spmenu a:active {
+	background: #afdefa;
+	color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 240px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	border-bottom: 1px solid #258ecd;
+	padding: 1em;
+}
+
+.cbp-spmenu-left {
+	left: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}

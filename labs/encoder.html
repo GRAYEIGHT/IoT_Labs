@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Lab - Measure Rotation</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="GRAY8 LLC">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../js/labs.js"></script>
+</head>
+<body class="lab">
+	<section id="menu" class="">
+		<table style="width:100%">
+			<col width="80px">
+			<tr>
+				<td><a class="menuItem intro" href="../index.html">&lt;&nbsp;Back</a></td>
+				<td><a class="menuItem intro" href="#introAnchor">Intro</a></td>
+				<td><a class="menuItem parts" href="#partsAnchor">Parts</a></td>
+				<td><a class="menuItem wiring" href="#wiringAnchor">Wiring</a></td>
+				<td><a class="menuItem program" href="#programAnchor">Program</a></td>
+				<td><a class="menuItem notWorking" href="#notWorkingAnchor">Not Working</a></td>
+				<td><a class="menuItem goingFurther" href="#goingFurtherAnchor">Going Further</a></td>
+			</tr>
+		</table>
+	</section>
+	<section id="title" class="card fade-in">
+		<h1>Measure Rotation</h1>
+		<p>
+			In this workshop, you will connect a rotary encoder to two (2) Arduino digital pins <br>and program the Arduino to display the encoder status through the serial monitor.
+		</p>
+	</section>
+	<div id="introAnchor" class="anchor"></div>
+	<section id="intro" class="card fade-in">
+		<div class="header"><h1>Introduction</h1></div>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<col width="100%">
+			<tr>
+				<td>
+					<p>
+						A rotary encoder is a device that rotates forever. Simple ones have no real state like a pot does, so when you start up,
+						you won’t be able to simply read from the encoder where it is turned to. 
+						However, if you keep track of the rotation in your program, you can use it as a knob input you can turn up or down as much as you would like.
+					</p>
+					<p>
+						If you can determine when a value changes on the rotary encoder you can check what direction it is turning. 
+						If you increment a value every time it turned one way, and deincrement it when we trun one step the other, 
+						you can keep track of how much it has moved since we started. So if you want a knob that can turn up to 11, this is your guy. 
+					</p>
+					<p>
+						For this lab, you will connect a rotary encode to the Arduino Uno. The output of the encode is fed into a two (2) digital pin, 
+						which is configured in the Setup() function to act as an input. When the rotary encoder turns, the Arduino Uno will read the encode outpu pins and
+						determine it direction of rotation.  
+					</p>
+					<p>
+						To begin, grab the parts listed in the <i>Parts</i> section and assemble them as shown in the diagram in the <i>Breadboard</i> section. 
+					</p>
+					<p>
+						Once your circuit is assembled, use the Arduino IDE to type (or cut and paste) the code in the <i>Program</i> section and upload it to your Arduino. 
+						To do this, plug the Arduino board into your USB port. Then select the proper port in <i>Tools > Serial Port > (the comm port of your Arduino)</i>. 
+					</p>
+					<p>
+						Next, upload the program by going to <i>File > Upload</i> or typing ctrl+U. After the program loads, feel free to knock over your project!
+					</p>
+				</td>
+			</tr>
+		</table>
+
+	</section>
+	<div id="partsAnchor" class="anchor"></div>
+	<section id="parts" class="card fade-in">
+		<div class="header"><h1>Parts</h1></div>
+		<div class="content">
+			<p>The following are the parts for this lab.</p>
+			<table>
+				<col width="25%">
+				<tr>
+					<td valign="top">
+						<img src="../images/parts/encoder.png" style="height:100px; margin-left:20px">
+					</td>
+					<td>
+						<p>One (1) rotary encoder.</p>
+					</td>
+				</tr>
+			</table>
+			<div>
+	</section>
+	<div id="wiringAnchor" class="anchor"></div>
+	<section id="wiring" class="card fade-in">
+		<div  class="header"><h1>Wiring</h1></div>
+		<img src="../images/wiring/encoder_bb.png">
+	</section>
+	<div id="programAnchor" class="anchor"></div>
+	<section id="program" class="card fade-in">
+		<div  class="header"><h1>Program</h1></div>
+		<code><pre>
+//these pins can not be changed 2/3 are special pins
+int encoderPin1 = 2;
+int encoderPin2 = 3;
+
+volatile int lastEncoded = 0;
+volatile long encoderValue = 0;
+
+long lastencoderValue = 0;
+
+int lastMSB = 0;
+int lastLSB = 0;
+
+void setup() {
+  Serial.begin (9600);
+
+  pinMode(encoderPin1, INPUT); 
+  pinMode(encoderPin2, INPUT);
+
+  digitalWrite(encoderPin1, HIGH); //turn pullup resistor on
+  digitalWrite(encoderPin2, HIGH); //turn pullup resistor on
+
+  //call updateEncoder() when any high/low changed seen
+  //on interrupt 0 (pin 2), or interrupt 1 (pin 3) 
+  attachInterrupt(0, updateEncoder, CHANGE); 
+  attachInterrupt(1, updateEncoder, CHANGE);
+}
+
+void loop(){ 
+  //Do stuff here
+
+  Serial.println(encoderValue);
+
+  delay(1000); //just here to slow down the output, and show it will work  even during a delay
+}
+
+void updateEncoder(){
+  int MSB = digitalRead(encoderPin1); //MSB = most significant bit
+  int LSB = digitalRead(encoderPin2); //LSB = least significant bit
+
+  int encoded = (MSB &lt;&lt; 1) |LSB; //converting the 2 pin value to single number
+  int sum  = (lastEncoded &lt;&lt; 2) | encoded; //adding it to the previous encoded value
+
+  if(sum == 0b1101 || sum == 0b0100 || sum == 0b0010 || sum == 0b1011) encoderValue ++;
+  if(sum == 0b1110 || sum == 0b0111 || sum == 0b0001 || sum == 0b1000) encoderValue --;
+
+  lastEncoded = encoded; //store this value for next time
+}
+		</pre></code>
+	</section>
+	<div id="notWorkingAnchor" class="anchor"></div>
+	<section id="notWorking" class="card fade-in">
+		<div class="header"><h1>Not Working?</h1></div>
+		<h2>Program not uploaded</h2>
+		<p>
+		Make sure the proper serial port is selected. Select the serial port in the Arduino IDE menu <i>tools > serial port</i>.
+		</p>
+		<h2>Encoder not seated</h2>
+		<p>
+			The rotary encoder may not be seated properly in the breadboard. If this occurs, it will not make a connection to the jumper wires.
+			Check to make sure that the sensor is pushed firmly into the breadboard.
+		</p>
+	</section>
+	<div id="goingFurtherAnchro" class="anchor"></div>
+	<section id="goingFurther" class="card fade-in">
+		<div class="header"><h1>Going Further</h1></div>
+		<h2>Brightnen and Dim an LED</h2>
+		<p>
+			Add an LED to your circuit and have the program change its brighness as the encoder value increases. Dim the LED when the encoder value decreases.
+		</p>
+		<h2>Add Sound</h2>
+		<p>
+			Add a speaker to your circuit and have the program increase or decrease the volume based on the direction fo the rotary encoder. 
+		</p>
+	</section>
+	<section id="footer"></footer>
+</body>
+</html>

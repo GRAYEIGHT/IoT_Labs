@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Lab - Latch On/Off with a Magnet</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="GRAY8 LLC">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../js/labs.js"></script>
+</head>
+<body class="lab">
+	<section id="menu" class="">
+		<table style="width:100%">
+			<col width="80px">
+			<tr>
+				<td><a class="menuItem intro" href="../index.html">&lt;&nbsp;Back</a></td>
+				<td><a class="menuItem intro" href="#introAnchor">Intro</a></td>
+				<td><a class="menuItem parts" href="#partsAnchor">Parts</a></td>
+				<td><a class="menuItem wiring" href="#wiringAnchor">Wiring</a></td>
+				<td><a class="menuItem program" href="#programAnchor">Program</a></td>
+				<td><a class="menuItem notWorking" href="#notWorkingAnchor">Not Working</a></td>
+				<td><a class="menuItem goingFurther" href="#goingFurtherAnchor">Going Further</a></td>
+			</tr>
+		</table>
+	</section>
+	<section id="title" class="card fade-in">
+		<h1>Latch On/Off with a Magnet</h1>
+		<p>
+			In this workshop, you will connect a latching magnetic (hall effect) sensor to an Arduino digital pin <br>and program the Arduino to 
+			light an LED when the sensor detects a magnetic field.
+		</p>
+	</section>
+	<div id="introAnchor" class="anchor"></div>
+	<section id="intro" class="card fade-in">
+		<div class="header"><h1>Introduction</h1></div>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<col width="100%">
+			<tr>
+				<td>
+					<p>
+						Latching Hall effect (magentic) sensors detect the presence of a magnetic field. If a magnetic field is near, it will turn on. 
+						What makes the latching hall effect sensor unique is that they stay on after the magnet has been removed.
+						To turn off the sensor, a magnetic with an opposite polarity must be placed near the sensor.
+						Since the sensor is triggered by a magnet, the stronger the magnetic, the further the distance needed to trip the sensor. 
+						Hall effect sensors can be used as sensors for windows and doors and to determine the angle of a wheel. 
+						Also, wouldn't it be cool to have a secret lock that opens with a magnet! Yep, latching hall effect sensors can do that.
+					</p>
+					<p>
+						For this lab, you will connect a latching hall effect sensor to the Arduino Uno. The output of the sensor is fed into a digital pin, 
+						which is configured in the Setup() function to act as an input. When the hall effect sensor detects a magnetic field, the Arduino Uno lights an LED.  
+						When there is no magnetic field, the LED will stay on. Turning the magnet 180 degrees will cause the sensor to turn off.
+					</p>
+					<p>
+						A resistor, called a pull-up resistor, is connected to the output of the latching hall effect sensor. 
+						This resistor "pulls" the digital input pin to a value of one (1) when the sensor is not triggered is not pushed.
+					</p>
+					<p>
+						To begin, grab the parts listed in the <i>Parts</i> section and assemble them as shown in the diagram in the <i>Breadboard</i> section. 
+					</p>
+					<p>
+						Once your circuit is assembled, use the Arduino IDE to type (or cut and paste) the code in the <i>Program</i> section and upload it to your Arduino. 
+						To do this, plug the Arduino board into your USB port. Then select the proper port in <i>Tools > Serial Port > (the comm port of your Arduino)</i>. 
+					</p>
+					<p>
+						Next, upload the program by going to <i>File > Upload</i> or typing ctrl+U. After the program loads, feel free to knock over your project!
+					</p>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<div id="partsAnchor" class="anchor"></div>
+	<section id="parts" class="card fade-in">
+		<div class="header"><h1>Parts</h1></div>
+		<div class="content">
+			<p>The following are the parts for this lab.</p>
+			<table>
+				<col width="25%">
+				<tr>
+					<td valign="top">
+						<img src="../images/parts/redLED.svg" style="height:100px; margin-left:20px">
+					</td>
+					<td>
+						<p>One (1) LED. Your kit contains a red, green and yellow LED, use whichever color you like.</p>
+						<p>The longest lead is positive.</p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<img src="../images/parts/1KResistor.svg" style="height:100px; margin-left:20px">
+						<img src="../images/parts/1KResistor.svg" style="height:100px; margin-left:20px">
+					</td>
+					<td>
+						<p>
+							Two (1) 1K ohm resistors. The first resistor limits the current flowing to the LED. This makes sure the LED is not damaged.
+							The second resistor is used to pull up the output of the motion sesnor to +5volts.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<img src="../images/parts/HallEffect.svg" style="height:100px; margin-left:20px">
+					</td>
+					<td>
+						<p>
+							One (1) latching hall effect sensor. When you place a magnet near it, the LED will light.
+						</p>
+					</td>
+				</tr>
+			</table>
+			<div>
+	</section>
+	<div id="wiringAnchor" class="anchor"></div>
+	<section id="wiring" class="card fade-in">
+		<div  class="header"><h1>Wiring</h1></div>
+		<img src="../images/wiring/Hall_Effect_Switch_bb.svg">
+	</section>
+	<div id="programAnchor" class="anchor"></div>
+	<section id="program" class="card fade-in">
+		<div  class="header"><h1>Program</h1></div>
+		<code><pre>
+/*
+Sense Motion
+Turn on an LED when a motion sensor is detects motion. LED is normally off.
+*/
+int hallEffectPin = 2; //digital 2
+int ledPin = 3;        //digital 3
+
+void setup()
+{
+  Serial.begin(9600); 
+  pinMode(hallEffectPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop()
+{
+  int hallEffectVal = digitalRead(pirPin);
+
+  if(hallEffectVal == LOW)    //magnet near
+  {
+    Serial.println("hall effect ON");
+    digitalWrite(ledPin,HIGH);
+    delay(1000); 
+  }
+  
+  Serial.println("hall effect OFF");
+  digitalWrite(ledPin,LOW);
+}
+		</pre></code>
+	</section>
+	<div id="notWorkingAnchor" class="anchor"></div>
+	<section id="notWorking" class="card fade-in">
+		<div class="header"><h1>Not Working?</h1></div>
+		<h2>Program not uploaded</h2>
+		<p>
+			Make sure the proper serial port is selected. Select the serial port in the Arduino IDE menu <i>tools > serial port</i>.
+		</p>
+		<h2>LED not lighting up</h2>
+		<p>
+			LEDs will only work in one direction. Try turning it around. (no need to worry, installing it backwards does no permanently harm the LED)
+		</p>
+		<h2>Latching hall effect sensor backwards</h2>
+		<p>
+			The hall effect sensor may be backwards in the breadboard. If this occurs, it will not work.  
+			Remove the sensor, turn it 180 degress and place it back in the breadboard.
+		</p>
+	</section>
+	<div id="goingFurtherAnchro" class="anchor"></div>
+	<section id="goingFurther" class="card fade-in">
+		<div class="header"><h1>Going Further</h1></div>
+		<h2>Reverse the LED Lighting Order</h2>
+		<p>
+			Instead of having the LED light when a magnet is near, have is normally lit and turn it off when the sensor senses a magnetic field.
+		</p>
+		<p>
+		Change the program as follows:<br>
+		<code><pre>
+if (buttonState == LOW) {		// turn LED on:
+	digitalWrite(ledPin, HIGH);
+}
+else {					// turn LED off:
+	digitalWrite(ledPin, LOW);
+}	
+		</pre></code>
+		<p>
+		Then reload the program by clicking the upload button of selecting ctrl-u.
+		</p>
+		<h2>Use two LEDs to Display Hall Effect Status</h2>
+		<p>
+			Add a second LED that indicates when their is no magnetic near. When there is no magnetic field, the first LED will light.
+			When the magnet is turned 180 degrees, the first LED will cut off and the second LED will light.
+		</p>
+		<h2>Add Sound</h2>
+		<p>
+			Replace the LED with a piezo buzzer. When a magnet is detected, the buzzer will sound!
+		</p>
+	</section>
+	<section id="footer"></footer>
+</body>
+</html>

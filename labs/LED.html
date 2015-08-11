@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Lab - Light an LED</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="GRAY8 LLC">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../js/labs.js"></script>
+</head>
+<body class="lab">
+	<section id="menu" class="">
+		<table style="width:100%">
+			<col width="80px">
+			<tr>
+				<td><a class="menuItem intro" href="../index.html">&lt;&nbsp;Back</a></td>
+				<td><a class="menuItem intro" href="#introAnchor">Intro</a></td>
+				<td><a class="menuItem parts" href="#partsAnchor">Parts</a></td>
+				<td><a class="menuItem wiring" href="#wiringAnchor">Wiring</a></td>
+				<td><a class="menuItem program" href="#programAnchor">Program</a></td>
+				<td><a class="menuItem notWorking" href="#notWorkingAnchor">Not Working</a></td>
+				<td><a class="menuItem goingFurther" href="#goingFurtherAnchor">Going Further</a></td>
+			</tr>
+		</table>
+	</section>
+	<section id="title" class="card fade-in">
+		<h1>Light an LED</h1>
+		<p>
+			In this workshop, you will connect an LED to an Arduino digital pin and program<br> the Arduino to make the LED blink on and off in one second intervals.
+		</p>
+	</section>
+	<div id="introAnchor" class="anchor"></div>
+	<section id="intro" class="card fade-in">
+		<div class="header"><h1>Introduction</h1></div>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<col width="100%">
+			<tr>
+				<td>
+					<p>
+						An LED (light emitting diode) is a component that lights up when current passes through it.  
+						LED's come in a range of colors but a singel LED’s typically only emits a single color. 
+						But, there are LED’s that can emit a range of colors. These LED's have multiple leads, one for each color they support.
+						LED's have polarity, which means they have a positive (+) lead and a negative (-) lead. If not properly connected, an LED will not light.
+						Some uses of LED’s are as indicator lights or backlighting for panels.
+					</p>
+					<p>
+						For this lab you will use your Arduino Uno to turn on and off an LED every second, which makes the LED appear to be blinking.
+					</p>
+					<p>
+						To begin, grab the parts listed in the <i>Parts</i> section and assemble them as shown in the diagram in the <i>Breadboard</i> section. 
+					</p>
+					<p>
+						Once your circuit is assembled, use the Arduino IDE to type (or cut and paste) the code in the <i>Program</i> section and upload it to your Arduino. 
+						To do this, plug the Arduino board into your USB port. Then select the proper port in <i>Tools > Serial Port > (the comm port of your Arduino)</i>. 
+					</p>
+					<p>
+						Next, upload the program by going to <i>File > Upload</i> to I/O Board (ctrl+U). Finally, bask in the glory that your blinking LED offers.
+					</p>
+				</td>
+			</tr>
+		</table>
+
+	</section>
+	<div id="partsAnchor" class="anchor"></div>
+	<section id="parts" class="card fade-in">
+		<div class="header"><h1>Parts</h1></div>
+		<div class="content">
+			<p>The following are the parts for this lab.</p>
+			<table>
+				<col width="25%">
+				<tr>
+					<td valign="top">
+						<img src="../images/parts/redLED.svg" style="height:100px; margin-left:20px">
+					</td>
+					<td>
+						<p>One (1) LED. Your kit contains a red, green and yellow LED, use whichever color you like.</p>
+						<p>The longest lead is positive.</p>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">
+						<img src="../images/parts/1KResistor.svg" style="height:100px; margin-left:20px">
+					</td>
+					<td>
+						<p>One (1) 1K ohm resistor. The resistor limits the current flowing to the LED. This makes sure the LED is not damaged.</p>
+					</td>
+				</tr>
+			</table>
+			<div>
+	</section>
+	<div id="wiringAnchor" class="anchor"></div>
+	<section id="wiring" class="card fade-in">
+		<div  class="header"><h1>Wiring</h1></div>
+		<img src="../images/wiring/Single_LED_bb.svg">
+	</section>
+	<div id="programAnchor" class="anchor"></div>
+	<section id="program" class="card fade-in">
+		<div  class="header"><h1>Program</h1></div>
+		<code><pre>
+/*
+	Light an LED
+	Repeatedly turns on and off an LED once a second, then off for one second.
+*/
+
+int ledPin = 2;
+
+// The setup routine runs when you upload a program or press the reset button.
+void setup()
+{
+	pinMode(ledPin, OUTPUT);		// Sets the digital pin to output mode
+}
+
+// The loop routine runs over and over, forever.
+void loop()
+{
+	digitalWrite(ledPin, HIGH);		// turn the LED on (high voltage level)
+	delay(1000);					// wait for one (1) second
+	digitalWrite(ledPin, LOW);		// turn the LED off (low voltage level)
+	delay(1000);					// wait for one (1) second
+}
+		</pre></code>
+	</section>
+	<div id="notWorkingAnchor" class="anchor"></div>
+	<section id="notWorking" class="card fade-in">
+		<div class="header"><h1>Not Working?</h1></div>
+		<h2>Program not uploaded</h2>
+		<p>
+		Make sure the proper serial port is selected. Select the serial port in the Arduino IDE menu <i>tools > serial port</i>.
+		</p>
+		<h2>LED not lighting up</h2>
+		<p>
+			LEDs will only work in one direction. Try turning it around. (no need to worry, installing it backwards does no permanently harm the LED)
+		</p>
+	</section>
+	<div id="goingFurtherAnchro" class="anchor"></div>
+	<section id="goingFurther" class="card fade-in">
+		<div class="header"><h1>Going Further</h1></div>
+		<h2>Change the Pin</h2>
+		<p>
+		The LED is connected to pin two (2) of the Arduino. You can use any of the Arduino’s digital pins. 
+		To use a different digital pin, unplug the jumper from pin two (2) and move it to a pin of your choice (from 0- 13).
+		</p>
+		<p>
+		Change the program as follows:<br>
+		<code><pre>
+from: int ledPin = 2;
+to:   int ledPin = (new pin);
+		</pre></code>
+		<p>
+		Then reload the program by clicking the upload button of selecting ctrl-u.
+		</p>
+		</p>
+		<h2>Change the Blink Time</h2>
+		<p>
+		Want your LED to blink faster or slower?
+		</p>
+		<p>
+		Change the program as follows:<br>
+		<code><pre>
+from: delay(1000);					// wait for one (1) second
+to:   delay(new time on);
+from: delay(1000);					// wait for one (1) second
+to:   delay(new time off);
+		</pre></code>
+		</p>
+	</section>
+	<section id="footer"></footer>
+</body>
+</html>

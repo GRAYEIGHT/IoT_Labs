@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Lab X - Lab Name</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="GRAY8 LLC">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../js/labs.js"></script>
+</head>
+<body class="lab">
+	<section id="menu" class="">
+		<table style="width:100%">
+			<col width="80px">
+			<tr>
+				<td><a class="menuItem intro" href="../index.html">&lt;&nbsp;Back</a></td>
+				<td><a class="menuItem intro" href="#introAnchor">Intro</a></td>
+				<td><a class="menuItem parts" href="#partsAnchor">Parts</a></td>
+				<td><a class="menuItem wiring" href="#wiringAnchor">Wiring</a></td>
+				<td><a class="menuItem program" href="#programAnchor">Program</a></td>
+				<td><a class="menuItem notWorking" href="#notWorkingAnchor">Not Working</a></td>
+				<td><a class="menuItem goingFurther" href="#goingFurtherAnchor">Going Further</a></td>
+			</tr>
+		</table>
+	</section>
+	<section id="title" class="card fade-in">
+		<h1>Measuring Angle</h1>
+		<p>
+			In this workshop, you will connect a accelerometer to an Arduino via the I2C interface. You will program the Arduino to 
+			send a angle information over the serial interface when you move the accelerometer.
+		</p>
+	</section>
+	<div id="introAnchor" class="anchor"></div>
+	<section id="intro" class="card fade-in">
+		<div class="header"><h1>Introduction</h1></div>
+		<p>
+			An accelerometer is an sensor device that measures forces. These forces can be static, 
+			like the force of gravity, or dynamic like the force of a moving object.
+			They are great for measuring the angle of an object or telling you the speed of your  remote-control drone.
+		</p>
+		<p>
+			A magnetometer is a sensor that determines where the strongest magnetic force is coming from. They are generally used to detect magnetic north.
+			Thus, the magnetometer acts like a compass. They are great for determining your direction.
+		</p>
+		<p>
+			The combination of the accelerometer and the magnetometer works well to determine the orientation of an object in 3D space.
+			This is how your game controller controls the image of a video game.
+		</p>
+		<p>
+			For this lab, you will connect an an Adafruit Flora accelerometer/compas sensor to the Arduino Uno. 
+			The accelerometer communicates with the Arduino via the I2C interface. 
+			It should be noted that the Flora sensor is powered by +3.3volts. Make sure not to attach the Flora's power pin to +5volts, it may damage the sensor.
+		</p>
+		<p>
+			The sketch program will read the three (3) axis values from the accelerometer and the magnetometer reading and will send the data to the serial port.
+			You will be able to read the data using the Arduino IDE's serial monitor.
+		</p>
+		<p>
+			To begin, grab the parts listed in the Parts section and assemble them as illustrated in the diagram in the Breadboard section. 
+		</p>
+		<p>
+			Once your circuit is assembled, type, or cut and paste, the program sketch into the Arduin IDE. Once the sketch is entered, upload the program to the Arduino
+			by clicking the upload button.
+			Use the Arduino IDE to type in the code in the Program section and upload it to your Arduino.
+			Make sure you select the proper port for the Arduino. The port is set under the Tools > Serial Port > (the comm port of your Arduino) menu item. 
+		</p>
+		<p>
+			Next, upload the program by going to File > Upload to I/O Board (ctrl+U). The sensors data should be displayed on the serial monitor. 
+		</p>
+	</section>
+	<div id="partsAnchor" class="anchor"></div>
+	<section id="parts" class="card fade-in">
+		<div class="header"><h1>Parts</h1></div>
+		<p>The following the parts for this lab.</p>
+		<table>
+			<col width="50%">
+			<tr>
+				<td valign="top">
+					<h2>Accelerometer</h2>
+					<img src="../images/parts/accelerometer.svg" style="height:100px; margin-left:20px">
+				</td>
+				<td>
+					<p>Measures angle and acceleration</p>
+					<p>Four (4) pin. VCC (3.3v), GND, SCL and SDA.</p>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<div id="wiringAnchor" class="anchor"></div>
+	<section id="wiring" class="card fade-in">
+		<div  class="header"><h1>Wiring</h1></div>
+		<img src="../images/wiring/Accelerometer_bb.svg" style="width:1024px">
+	</section>
+	<div id="programAnchor" class="anchor"></div>
+	<section id="program" class="card fade-in">
+		<div  class="header"><h1>Program</h1></div>
+		<code><pre>
+#include Wire.h&gt;
+#include &lt;Adafruit_LSM303.h&gt;
+
+Adafruit_LSM303 lsm;
+
+void setup() 
+{
+  Serial.begin(9600);
+  pinMode(7,OUTPUT);
+  digitalWrite(7, LOW);
+  
+  // Try to initialise and warn if we couldn't detect the chip
+  if (!lsm.begin())
+  {
+    Serial.println("Oops ... unable to initialize the LSM303. Check your wiring!");
+    while (1);
+  }
+}
+
+void loop() 
+{
+  lsm.read();
+  Serial.print("Accel X: "); Serial.print((int)lsm.accelData.x); Serial.print(" ");
+  Serial.print("Y: "); Serial.print((int)lsm.accelData.y);       Serial.print(" ");
+  Serial.print("Z: "); Serial.println((int)lsm.accelData.z);     Serial.print(" ");
+  Serial.print("Mag X: "); Serial.print((int)lsm.magData.x);     Serial.print(" ");
+  Serial.print("Y: "); Serial.print((int)lsm.magData.y);         Serial.print(" ");
+  Serial.print("Z: "); Serial.println((int)lsm.magData.z);       Serial.print(" ");
+  delay(1000);
+}
+
+		</pre></code>
+	</section>
+	<div id="notWorkingAnchor" class="anchor"></div>
+	<section id="notWorking" class="card fade-in">
+		<div class="header"><h1>Not Working</h1></div>
+		<h2>Program not uploaded.</h2>
+		<p>Check the make sure the proper serial port is selected. You select the serial port using the menu items tools > serial port.</p>
+		<h2>I2C Pins Switched</h2>
+		<p>The accelerometer will not work if the I2C pins are not properly connected. Make sure that the SDA and SCL line match between the accelerometer and the Arduino.</p>
+	</section>
+	<div id="goingFurtherAnchor" class="anchor"></div>
+	<section id="goingFurther" class="card fade-in">
+		<div class="header"><h1>Going Further</h1></div>
+		<h2>Add LEDs</h2>
+		<p>
+			Add four (4) LEDs to your circuit. These LEDs represent forward, backwards, left and right. Program the Arduino to light each LED when the acclerometer passes a threshold
+			for each direction.
+		</p>
+	</section>
+	<section id="footer"></footer>
+</body>
+</html>

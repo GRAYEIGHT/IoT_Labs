@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="32px" viewBox="0 0 17 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="breadboard" sketch:type="MSLayerGroup">
+            <rect id="connector0pin" sketch:type="MSShapeGroup" x="0" y="22.081" width="2.15998" height="1"></rect>
+            <rect id="connector1pin" sketch:type="MSShapeGroup" x="7.18095" y="22.081" width="2.15998" height="1"></rect>
+            <rect id="connector2pin" sketch:type="MSShapeGroup" x="14.3669" y="22.081" width="2.15998" height="1"></rect>
+            <path d="M1.07999,24.081 L1.07999,31.259" id="connector0leg" stroke="#8C8C8C" stroke-width="2.15998" sketch:type="MSShapeGroup"></path>
+            <path d="M8.26094,24.081 L8.26094,31.259" id="connector1leg" stroke="#8C8C8C" stroke-width="2.15998" sketch:type="MSShapeGroup"></path>
+            <path d="M15.4469,24.081 L15.4469,31.259" id="connector2leg" stroke="#8C8C8C" stroke-width="2.15998" sketch:type="MSShapeGroup"></path>
+            <rect id="rect9506" fill="#8C8C8C" sketch:type="MSShapeGroup" x="7.17795" y="14.731" width="2.15398" height="9.351"></rect>
+            <path d="M3.28698,14.731 L3.28698,18.047 C3.28698,18.471 2.504986,19.106 2.08899,19.472 C1.064,20.363 0.00101,21.291 0.00101,22.464 L0.00101,24.083 L2.15499,24.083 L2.15499,22.873 C2.15499,22.356 3.058983,21.484 3.50498,21.104 C4.501973,20.234 5.44997,19.414 5.44997,18.355 L5.44997,14.73 L3.28698,14.73 L3.28698,14.731 L3.28698,14.731 Z" id="path9510" fill="#8C8C8C" sketch:type="MSShapeGroup"></path>
+            <path d="M13.2209,14.731 L13.2209,18.047 C13.2209,18.471 14.001894,19.106 14.41989,19.472 C15.44688,20.363 16.50887,21.291 16.50887,22.464 L16.50887,24.083 L14.35489,24.083 L14.35489,22.873 C14.35489,22.356 13.450897,21.484 13.0049,21.104 C12.006907,20.234 11.05991,19.414 11.05991,18.355 L11.05991,14.73 L13.2209,14.73 L13.2209,14.731 L13.2209,14.731 Z" id="path9514" fill="#8C8C8C" sketch:type="MSShapeGroup"></path>
+            <rect id="rect9553" fill="#1A1A1A" sketch:type="MSShapeGroup" x="1.61499" y="4.659" width="13.2779" height="10.07"></rect>
+            <path d="M13.8889,4.659 L13.8889,7.112 L13.8889,15.34 L13.8889,17.182 C14.520895,16.469 14.89289,15.629 14.89289,14.729 L14.89289,14.729 L14.8929,4.659 L13.8889,4.659 L13.8889,4.659 Z" id="path9555" fill="#141414" sketch:type="MSShapeGroup"></path>
+            <path d="M2.62098,4.659 L1.61599,4.659 L1.61599,14.729 C1.61599,15.628 1.988987,16.469 2.62098,17.182 L2.62098,15.34 L2.62098,7.112 L2.62098,4.659 L2.62098,4.659 Z" id="path9557" fill="#242424" sketch:type="MSShapeGroup"></path>
+            <path d="M1.61499,4.659 L1.61499,4.659 C1.61499,5.558 1.987987,6.399 2.61998,7.112 L13.89588,7.112 C14.527875,6.399 14.90087,5.558 14.90087,4.659 L14.90087,4.659 L1.61499,4.659 L1.61499,4.659 Z" id="path9559" fill="#1F1F1F" sketch:type="MSShapeGroup"></path>
+            <path d="M8.25494,0 C4.58697,0 1.61499,2.086 1.61499,4.661 L14.89289,4.661 C14.8929,2.086 11.9229,0 8.25494,0 L8.25494,0 Z" id="path9561" fill="#141414" sketch:type="MSShapeGroup"></path>
+            <rect id="rect9563" fill="#000000" sketch:type="MSShapeGroup" x="2.62098" y="7.112" width="11.2759" height="10.07"></rect>
+        </g>
+    </g>
+</svg>
